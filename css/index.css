@@ -134,6 +134,7 @@ html,
 body {
   height: 100%;
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 .container header {
   background-color: red;
@@ -152,21 +153,47 @@ body {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 500px) {
+  .container header nav .top-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container header nav .top-menu a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: black;
+}
+.container header nav .top-menu a:hover {
+  color: dodgerblue;
+}
+.container .title {
+  padding-bottom: 10px;
+}
+.container .main-content {
+  background-color: slategray;
 }
 .container .main-content .intro {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  padding: 30px 0;
+}
+@media (max-width: 500px) {
+  .container .main-content .intro {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .container .main-content .intro img {
   border-radius: 50%;
   width: 20%;
   margin: 0 50px 0 0;
+}
+@media (max-width: 500px) {
+  .container .main-content .intro img {
+    margin: 0px 0px 10px 0px;
+  }
 }
 .container .main-content .intro .intro-description {
   text-align: center;
@@ -175,25 +202,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  padding: 30px 0;
   flex-direction: column;
+  font-size: 1.5rem;
+}
+.container .main-content .skills ul {
+  display: flex;
+  justify-content: center;
+}
+.container .main-content .skills ul li {
+  list-style-type: disc;
+  margin: 5px 15px;
 }
 .container .main-content .work-history {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  padding: 30px 0;
   flex-direction: column;
 }
 .container footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  padding: 30px 0;
+  flex-direction: column;
+  background-color: red;
+  height: 100%;
+}
+.container footer .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
   flex-direction: column;
 }
 .container footer a {
+  text-decoration: none;
   font-size: 1.5rem;
+  color: black;
+}
+.container footer a:hover {
+  color: dodgerblue;
 }
 .container h1 {
   font-size: 3rem;
